@@ -28,7 +28,7 @@ export default function App() {
           <a
             href="https://github.com/emilydmoore/Weather-App"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Open Source code{" "}
           </a>
