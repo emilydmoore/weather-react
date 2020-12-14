@@ -2,6 +2,8 @@ import React from "react";
 
 import "./Weather.css";
 
+import axios from "axios";
+
 export default function SearchForm() {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
