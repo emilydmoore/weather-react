@@ -37,18 +37,18 @@ export default function Weather() {
               class="weather-today"
             />
             <div class="float-left">
-              <span class="temperature" id="temperature">
+              <div class="temperature" id="temperature">
                 {weatherData.temperature}
-              </span>
-              <span class="units">
-                <a href="#" id="fahrenheit-link" class="active">
+              </div>
+              <div class="units">
+                <a href="" id="fahrenheit-link" class="active">
                   ˚F
                 </a>{" "}
                 |
-                <a href="#" id="celsius-link">
+                <a href="" id="celsius-link">
                   ˚C
                 </a>
-              </span>
+              </div>
             </div>
           </div>
         </div>
