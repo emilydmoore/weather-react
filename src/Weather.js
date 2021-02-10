@@ -58,13 +58,14 @@ export default function Weather(props) {
 
       <div className="weather-data">
         {form}
-        <ul>
           
 
           <h2 className="city">({city.toUpperCase(), weatherData.country})</h2>
-          <li className="temperature">
+          <h3 className="temperature">
             Temperature: {weatherData.temperature}˚F
-          </li>
+          </h3>
+          
+          <ul>
           <li className="icon">
             <img src={weatherData.icon} alt={weatherData.description} />{" "}
           </li>
