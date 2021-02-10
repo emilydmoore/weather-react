@@ -9,7 +9,7 @@ export default function App() {
       <div class="weather-app-wrapper">
        
 
-          <Weather />
+          <Weather defaultCity="Little Rock"/>
 
           <p class="card-text refresh">
             Last updated 3 mins ago
