@@ -24,7 +24,7 @@ export default function App() {
          
   
         <footer class="source-code">
-          This page was created by <a href="https://www.linkedin.com/in/emily-m-62527a55/">Emily Moore</a> {" "} with 
+          This page was created by <a href="https://www.linkedin.com/in/emily-m-62527a55/">Emily Moore</a> {" "} with {" "}
           <a
             href="https://github.com/emilydmoore/Weather-App"
             target="_blank"
