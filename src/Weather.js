@@ -61,7 +61,7 @@ export default function Weather(props) {
         <ul>
           
 
-          <h2 className="city">{city.toUpperCase(), weatherData.country}}</h2>
+          <h2 className="city">({city.toUpperCase(), weatherData.country})</h2>
           <li className="temperature">
             Temperature: {weatherData.temperature}˚F
           </li>
