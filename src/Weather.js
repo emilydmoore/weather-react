@@ -9,13 +9,19 @@ export default function Weather(props) {
   const [loaded, setLoaded] = useState(false);
   const [weatherData, setWeatherData] = useState("");
 
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
   function showWeatherData(response) {
 
 
     setWeatherData({
         city: response.data.name,
-      temperature: response.data.main.temp,
-      wind: response.data.wind.speed,
+        country: response.data.system.country,
+      temperature: Math.round(response.data.main.temp),
+      wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description, 
@@ -33,9 +39,7 @@ export default function Weather(props) {
     axios.get(apiUrl).then(showWeatherData);
   }
 
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
+  
 
   let form = (
     <form onSubmit={handleSearch}>
@@ -51,14 +55,15 @@ export default function Weather(props) {
 
   if (loaded) {
     return (
+
       <div className="weather-data">
         {form}
         <ul>
           
 
-          <li className="city">{weatherData.city}</li>
+          <h2 className="city">{city.toUpperCase(), weatherData.country}}</h2>
           <li className="temperature">
-            Temperature: {Math.round(weatherData.temperature)}˚F
+            Temperature: {weatherData.temperature}˚F
           </li>
           <li className="icon">
             <img src={weatherData.icon} alt={weatherData.description} />{" "}
@@ -66,7 +71,7 @@ export default function Weather(props) {
         <div className="weather-data">
           <li className="description">Description: {weatherData.description} </li>
           <li className="humidity">Humidity: {weatherData.humidity}% </li>
-          <li className="wind">Wind: {Math.round(weatherData.wind)}mph </li>
+          <li className="wind">Wind: {weatherData.wind}mph </li>
           </div>
           
         </ul>
