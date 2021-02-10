@@ -60,7 +60,7 @@ export default function Weather(props) {
         {form}
           
 
-          <h2 className="city">({city.toUpperCase(), weatherData.country})</h2>
+          <h2 className="city">({city.toUpperCase()}, {weatherData.country}</h2>
           <h3 className="temperature">
             Temperature: {weatherData.temperature}˚F
           </h3>
