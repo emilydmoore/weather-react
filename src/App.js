@@ -7,8 +7,8 @@ import SearchForm from "./SearchForm";
 export default function App() {
   return (
     <div class="container">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
+      <span class="weather-app-wrapper">
+        <span class="weather-app">
           <SearchForm />
           <Weather />
 
@@ -23,7 +23,7 @@ export default function App() {
             </button>
           </p>
          
-        </div>
+        </span>
         <small class="source-code">
           <a
             href="https://github.com/emilydmoore/Weather-App"
@@ -34,7 +34,7 @@ export default function App() {
           </a>
           by Emily Moore
         </small>
-      </div>
+      </span>
     </div>
   );
 }

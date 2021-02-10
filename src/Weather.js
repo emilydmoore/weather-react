@@ -4,7 +4,7 @@ import "./Weather.css";
 
 import axios from "axios";
 
-export default function SearchForm() {
+export default function Weather() {
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [weatherData, setWeatherData] = useState("");
