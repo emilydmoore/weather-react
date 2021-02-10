@@ -1,23 +1,28 @@
 import React, { useState } from "react";
-
 import "./Weather.css";
-
 import axios from "axios";
 
-export default function Weather() {
-  const [city, setCity] = useState("");
+
+
+export default function Weather(props) {
+  const [city, setCity] = useState(props.defaultCity);
   const [loaded, setLoaded] = useState(false);
   const [weatherData, setWeatherData] = useState("");
 
   function showWeatherData(response) {
-    setLoaded(true);
+
+
     setWeatherData({
+        city: response.data.main.temp,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      description: response.data.weather[0].description
+      description: response.data.weather[0].description, 
+      date: new Date(response.data.dt * 1000)
     });
+
+    setLoaded(true);
   }
 
   function handleSearch(event) {
