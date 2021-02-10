@@ -51,18 +51,24 @@ export default function Weather(props) {
 
   if (loaded) {
     return (
-      <div class="weather-data">
+      <div className="weather-data">
         {form}
         <ul>
-          <li class="temperature">
+          
+
+          <li className="city">{weatherData.city}</li>
+          <li className="temperature">
             Temperature: {Math.round(weatherData.temperature)}˚F
           </li>
-          <li class="description">Description: {weatherData.description} </li>
-          <li class="humidity">Humidity: {weatherData.humidity}% </li>
-          <li class="wind">Wind: {Math.round(weatherData.wind)}mph </li>
-          <li class="icon">
+          <li className="icon">
             <img src={weatherData.icon} alt={weatherData.description} />{" "}
           </li>
+        <div className="weather-data">
+          <li className="description">Description: {weatherData.description} </li>
+          <li className="humidity">Humidity: {weatherData.humidity}% </li>
+          <li className="wind">Wind: {Math.round(weatherData.wind)}mph </li>
+          </div>
+          
         </ul>
       </div>
     );
