@@ -64,16 +64,16 @@ export default function Weather(props) {
           <h3 className="temperature">
             Temperature: {weatherData.temperature}˚F
           </h3>
-          
+
           <ul>
           <li className="icon">
             <img src={weatherData.icon} alt={weatherData.description} />{" "}
           </li>
-        <div className="weather-data">
+        
           <li className="description">Description: {weatherData.description} </li>
           <li className="humidity">Humidity: {weatherData.humidity}% </li>
           <li className="wind">Wind: {weatherData.wind}mph </li>
-          </div>
+          
           
         </ul>
       </div>
