@@ -50,3 +50,16 @@ li {
   position: relative;
   top: -30px;
 }
+
+.search {
+  width: 10px;
+  padding-right: 0px;
+}
+
+.shadow-sm {
+  padding: 6px;
+}
+
+.current {
+  padding-left: 0px;
+}
