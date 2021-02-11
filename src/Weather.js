@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
-
+import CurrentLocation from "./CurrentLocation";
 
 
 export default function Weather(props) {
@@ -44,7 +44,6 @@ export default function Weather(props) {
       event.preventDefault();
       handleSearch();
   }
-  
 
   let form = (
     <form id="city-search-form" onSubmit={handleSubmit}>
@@ -63,11 +62,8 @@ export default function Weather(props) {
       <input type="submit" value="search" class="form-control btn btn-primary shadow-sm"/>
    </span>
    <span className="col-3 current">
-       <button type="button"
-       className="btn btn-success"
-       id="current-location-button">
-           current location
-       </button>
+     < CurrentLocation />
+    
    </span>
    </span>
     </form>
