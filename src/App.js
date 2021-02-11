@@ -1,7 +1,7 @@
 
 import './App.css';
 import Weather from './Weather';
-
+import Forecast from './Forecast';
                               
 
 export default function App() {
@@ -24,7 +24,7 @@ export default function App() {
             </button>
           </p>
         
-      
+      <Forecast />
     </div>
     </div>
       <footer className="source-code">
