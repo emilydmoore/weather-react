@@ -1,13 +1,13 @@
 
 import './App.css';
 import Weather from './Weather';
-
+import SearchForm from './SearchForm';
                               
 
 export default function App() {
   return (
       <div class="weather-app-wrapper">
-       
+        <SearchForm />
 
           <Weather defaultCity="Little Rock"/>
 

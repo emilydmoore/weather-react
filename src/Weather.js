@@ -11,6 +11,7 @@ export default function Weather(props) {
 
 
   function updateCity(event) {
+      event.preventDefault();
     setCity(event.target.value);
   }
 
@@ -19,7 +20,7 @@ export default function Weather(props) {
 
     setWeatherData({
         city: response.data.name,
-        country: response.data.system.country,
+        country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
@@ -60,7 +61,7 @@ export default function Weather(props) {
         {form}
           
 
-          <h2 className="city">({city.toUpperCase()}, {weatherData.country}</h2>
+          <h2 className="city">{city.toUpperCase()}, {weatherData.country}</h2>
           <h3 className="temperature">
             Temperature: {weatherData.temperature}˚F
           </h3>
