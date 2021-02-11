@@ -32,18 +32,22 @@ export default function Weather(props) {
     setLoaded(true);
   }
 
-  function handleSearch(event) {
-    event.preventDefault();
+  function handleSearch() {
+
     let apiKey = "30d908cd66a42b7d4c24ca6910b237cd";
     let units = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(showWeatherData);
   }
 
+  function handleSubmit(event){
+      event.preventDefault();
+      handleSearch();
+  }
   
 
   let form = (
-    <form id="city-search-form" onSubmit={handleSearch}>
+    <form id="city-search-form" onSubmit={handleSubmit}>
        <span className="row">
         <span className="col-6 search">
       <input
@@ -72,14 +76,14 @@ export default function Weather(props) {
   if (loaded) {
     return (
 
-      <div className="weather-data">
+      <div className="current-weather">
         {form}
           
 
-          <h2 className="city">{city.toUpperCase()}, {weatherData.country}</h2>
-          <h3 className="temperature">
+          <h2 className="city">{city}, {weatherData.country}</h2>
+          <h4 className="temperature">
             Temperature: {weatherData.temperature}˚F
-          </h3>
+          </h4>
 
           <ul>
           <li className="icon">
