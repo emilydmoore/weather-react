@@ -13,16 +13,6 @@ export default function App() {
 
           <Weather defaultCity="Little Rock"/>
 
-          <p className="card-text refresh">
-            Last updated 3 mins ago
-            <button
-              type="button"
-              className="btn btn-primary refresh"
-              id="refresh-page-button"
-            >
-              Refresh
-            </button>
-          </p>
         
       <Forecast />
     </div>
