@@ -7,7 +7,14 @@ export default function CurrentLocation(){
 
 return (
 
-<div>Hi</div>
+<div>
+    <form>
+        <button type="button" className="btn btn-success">
+            current location
+        </button>
+        
+    </form>
+</div>
   
 );
 }
