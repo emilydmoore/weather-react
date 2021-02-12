@@ -1,5 +1,5 @@
 import React from "react"; 
-import axios from "axios";
+
 import Geolocation from 'react-native-geolocation-service';
 
 export default function CurrentLocation(){
