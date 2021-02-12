@@ -4,7 +4,7 @@ import Weather from './Weather';
 import Forecast from './Forecast';
                               
 
-export default function App() {
+export default function App(props) {
   return (
     <div className="app">
       <div className="weather-app">
@@ -18,14 +18,16 @@ export default function App() {
     </div>
     </div>
       <footer className="source-code">
-          This page was created by <a href="https://www.linkedin.com/in/emily-m-62527a55/">Emily Moore</a> {" "} with {" "}
-          <a
+        Open Source Code on {""}
+           <a
             href="https://github.com/emilydmoore/Weather-App"
             target="_blank"
             rel="noopener noreferrer"
           >
-            open source on Github
+            Github
           </a>
+           {""} created by <a href="https://www.linkedin.com/in/emily-m-62527a55/">Emily Moore</a>
+       
           
         </footer>
     </div>

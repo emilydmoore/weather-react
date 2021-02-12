@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
-import CurrentLocation from "./CurrentLocation";
+
 
 
 export default function Weather(props) {
+
   const [city, setCity] = useState(props.defaultCity);
   const [loaded, setLoaded] = useState(false);
-  const [weatherData, setWeatherData] = useState("");
+  const [weatherData, setWeatherData] = useState(false);
 
 
   function updateCity(event) {
@@ -19,6 +20,7 @@ export default function Weather(props) {
 
 
     setWeatherData({
+      ready: true, 
         city: response.data.name,
         country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
@@ -95,6 +97,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
+    handleSearch();
     return form;
   }
 }
