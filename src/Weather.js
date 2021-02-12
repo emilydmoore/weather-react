@@ -62,7 +62,7 @@ export default function Weather(props) {
       <input type="submit" value="search" class="form-control btn btn-primary shadow-sm"/>
    </span>
    <span className="col-3 current">
-     < CurrentLocation />
+   
     
    </span>
    </span>
