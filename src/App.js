@@ -18,13 +18,13 @@ export default function App(props) {
     </div>
     </div>
       <footer className="source-code">
-        Open Source Code on {""}
+        
            <a
             href="https://github.com/emilydmoore/Weather-App"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Github
+           Open Source Code
           </a>
            {""} created by <a href="https://www.linkedin.com/in/emily-m-62527a55/">Emily Moore</a>
        
