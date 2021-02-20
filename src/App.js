@@ -1,7 +1,7 @@
 
 import './App.css';
 import Weather from './Weather';
-import Forecast from './Forecast';
+
                               
 
 export default function App(props) {
@@ -13,8 +13,7 @@ export default function App(props) {
 
           <Weather defaultCity="Little Rock"/>
 
-        
-      <Forecast />
+       
     </div>
     </div>
       <footer className="source-code">
