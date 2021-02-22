@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 
+import WeatherTemperature from "./WeatherTemperature";
 import Forecast from "./Forecast";
+
 
 
 export default function Weather(props) {
@@ -81,7 +83,9 @@ export default function Weather(props) {
 
           <h2 className="city">{city}, {weatherData.country}</h2>
           <h4 className="temperature">
-            Temperature: {weatherData.temperature}˚F
+             <div className="col-sm degree">
+          <WeatherTemperature fahrenheit={weatherData.temperature} />
+          </div>
           </h4>
 
           <ul>
@@ -95,6 +99,7 @@ export default function Weather(props) {
           
           
         </ul>
+       
          <Forecast city={weatherData.city} />
       </div>
      
