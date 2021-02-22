@@ -91,12 +91,10 @@ export default function Weather(props) {
                 </p>
 
               <div className="row">
-                <div className="col-3">
+                <div className="col-6">
              
                      <img className="icon" src={weatherData.icon} alt={weatherData.description} />{" "}
-          </div>
-          
-          <div className="col-3">
+         
           <WeatherTemperature fahrenheit={weatherData.temperature} />
   </div>
       
