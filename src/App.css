@@ -9,14 +9,9 @@ body {
   margin: 20px auto;
 }
 
-h3 {
-  color: #1e2018;
-  font-size: 16px;
-  font-weight: 400;
-  text-align: center;
-  height: 15px;
-  line-height: 15px;
-  padding-top: 7px;
+.app {
+  margin: 20px auto;
+  max-width: 700px;
 }
 
 .weather-app {
@@ -27,11 +22,6 @@ h3 {
   background-image: url(https://images.unsplash.com/photo-1601836242645-4221c1e917d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80),
     linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
   background-size: cover;
-}
-
-.weather-app-wrapper {
-  margin: 20px auto;
-  max-width: 700px;
 }
 
 .refresh {
