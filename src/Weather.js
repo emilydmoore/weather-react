@@ -4,7 +4,7 @@ import axios from "axios";
 
 import WeatherTemperature from "./WeatherTemperature";
 import Forecast from "./Forecast";
-
+import FormattedDate from "./FormattedDate";
 
 
 
@@ -83,6 +83,9 @@ export default function Weather(props) {
           
 
           <h2 className="city">{city}, {weatherData.country}</h2>
+          <p className="Date">
+                <FormattedDate date={weatherData.date} />
+              </p>
           <h4 className="temperature">
              <div className="col-sm degree">
           <WeatherTemperature fahrenheit={weatherData.temperature} />
