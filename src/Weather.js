@@ -91,16 +91,17 @@ export default function Weather(props) {
                 </p>
 
               <div className="row">
-                <div className="col-6">
-                  <span className="weather-today"> 
+                <div className="col-3">
+             
                      <img className="icon" src={weatherData.icon} alt={weatherData.description} />{" "}
+          </div>
           
+          <div className="col-3">
           <WeatherTemperature fahrenheit={weatherData.temperature} />
-  
-         </span>
-         </div>
+  </div>
+      
 
-        <div className="col-6">
+        <div className="col-3">
         <ul className="">
           
           <li className="humidity">Humidity: {weatherData.humidity}% </li>
@@ -109,9 +110,10 @@ export default function Weather(props) {
           
         </ul>
         </div>
-       </div>
+       
          <Forecast city={weatherData.city} />
       </div>
+    </div>
      
     );
   } else {
