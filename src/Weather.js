@@ -59,6 +59,7 @@ export default function Weather(props) {
         type="search"
         placeholder="type a city"
         autoFocus={true}
+        autocomplete="off"
         className="form-control shadow-sm border-0"
         onChange={updateCity}
         id="city-input"
@@ -85,25 +86,30 @@ export default function Weather(props) {
           <h2 className="city">{city}, {weatherData.country}</h2>
           <p className="Date">
                 <FormattedDate date={weatherData.date} />
-              </p>
-          <h4 className="temperature">
-             <div className="col-sm degree">
-          <WeatherTemperature fahrenheit={weatherData.temperature} />
-          </div>
-          </h4>
 
-          <ul>
-          <li className="icon">
-            <img src={weatherData.icon} alt={weatherData.description} />{" "}
-          </li>
-        
-          <li className="description">Description: {weatherData.description} </li>
+                {weatherData.description} 
+                </p>
+
+              <div className="row">
+                <div className="col-6">
+                  <span className="weather-today"> 
+                     <img className="icon" src={weatherData.icon} alt={weatherData.description} />{" "}
+          
+          <WeatherTemperature fahrenheit={weatherData.temperature} />
+  
+         </span>
+         </div>
+
+        <div className="col-6">
+        <ul className="">
+          
           <li className="humidity">Humidity: {weatherData.humidity}% </li>
           <li className="wind">Wind: {weatherData.wind}mph </li>
           
           
         </ul>
-       
+        </div>
+       </div>
          <Forecast city={weatherData.city} />
       </div>
      

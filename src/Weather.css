@@ -1,4 +1,8 @@
-h2 {
+.current-weather {
+  text-transform: capitalize;
+}
+
+.city {
   color: #1e2018;
   font-size: 35px;
   padding-top: 15px;
@@ -21,37 +25,10 @@ li {
   margin-left: 7px;
 }
 
-.weather-description::first-letter {
-  text-transform: capitalize;
-}
-
-.weather-description img {
-  margin-right: 5px;
-}
-
-.weather-description .active {
-  color: #1e2018;
-  cursor: default;
-}
-
-.weather-description .active:hover {
-  text-decoration: none;
-}
-
-.units {
-  position: relative;
-  top: -30px;
-}
-
 .search {
-  width: 10px;
   padding-right: 0px;
 }
 
 .shadow-sm {
   padding: 6px;
-}
-
-.current {
-  padding-left: 0px;
 }

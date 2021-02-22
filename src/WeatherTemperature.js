@@ -19,7 +19,7 @@ export default function WeatherTemperature(props) {
 
         return (
             <div className="WeatherTemperature">
-                <p className="Temperature"> {Math.round(props.fahrenheit)}</p>
+                <span className="Temperature"> {Math.round(props.fahrenheit)}</span>
                 <span className="units">
                     {" "}
                     ˚F | {" "}
