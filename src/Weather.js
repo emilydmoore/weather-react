@@ -65,7 +65,7 @@ export default function Weather(props) {
         id="city-input"
       />
       </span>
-      <span>
+      <span className="search-button">
       <input type="submit" value="search" class="form-control btn btn-primary shadow-sm"/>
    </span>
    <span className="col-3 current">

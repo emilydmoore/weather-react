@@ -29,6 +29,10 @@ li {
   padding-right: 0px;
 }
 
+.search-button {
+  padding-left: 10px;
+}
+
 .shadow-sm {
   padding: 6px;
 }
