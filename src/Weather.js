@@ -83,7 +83,7 @@ export default function Weather(props) {
         {form}
           
 
-          <h2 className="city">{city}, {weatherData.country}</h2>
+          <h2 className="city">{weatherData.city}, {weatherData.country}</h2>
           <p className="Date">
                 <FormattedDate date={weatherData.date} />
 
